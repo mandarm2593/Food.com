@@ -50,7 +50,9 @@ body{
     color:#004C4C;
     border: 1px solid #004C4C;
 }
-
+.border{
+    border:1px solid lightgrey;
+}
 .zoom {
     transition: transform .8s; 
   
@@ -58,7 +60,7 @@ body{
 
 .zoom:hover {
     transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-    border: 1px solid #004C4C;
+    border: 1px solid #004C4C !important;
     text-decoration: unset !important;
 }
 
@@ -86,5 +88,6 @@ body{
 .nav-link{
     padding:20px !important;
 }
+
 
 

@@ -2,7 +2,7 @@
 
 @section('content')
 <br>
-{!! Form::open(['action' => ['PostsController@update',$post->id]]) !!}
+{!! Form::open(['action' => ['PostsController@update',$post->id],'enctype'=>'multipart/form-data']) !!}
     
 <div class="form-group">
     
@@ -14,8 +14,9 @@
     {{ Form::textarea('body', $post->body, ['class' => 'form-control']) }}
     
     {!! Form::hidden('_method', 'PUT') !!}
-    
-   {{Form::submit('Submit',['class'=>'button'])}}
+    {!! Form::file('cover_image') !!}
+
+    {{Form::submit('Submit',['class'=>'button float-md-right'])}}
 
 </div>
 
